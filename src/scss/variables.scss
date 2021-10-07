@@ -1,0 +1,30 @@
+$white-grey: #F8F8F8;
+$white: #ffffff;
+$light-green: #D9FFF5;
+$pink: #FF3E79;
+$green: #41F6D7;
+$green-light: #B8FFEC;
+$grey: #7E7E82;
+$light-green: #D9FFF5;
+$shade: #EAEAEA;
+$black: #1B1C21;
+$almost-white: #B5B6BC;
+$grey-white: #DDDDDD;
+
+@font-face {
+  font-family: "TT Lakes";
+  font-style: normal;
+  src: url("../fonts/TTlakes-Regular.woff")
+}
+
+@font-face {
+  font-family: "TTLakes-Medium";
+  font-style: normal;
+  src: url("../fonts/TTlakes-Medium.woff")
+}
+
+@font-face {
+  font-family: "TTLakes-Bold";
+  font-style: normal;
+  src: url("../fonts/TTlakes-Bold.woff")
+}

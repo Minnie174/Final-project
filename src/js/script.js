@@ -1,5 +1,3 @@
-export
-
 new Swiper(".swiper-container", {
     pagination: {
         el: '.swiper-pagination',
@@ -19,29 +17,23 @@ document.getElementById('moreBtn').addEventListener('click', function () {
     }
 })
 
+document.getElementById('p2').addEventListener('click', function () {
+  document.querySelector('.technics__repair--swiper').classList.toggle('swiper-container--hidden');
+  if(document.querySelector('.technics__repair--swiper').classList.contains('swiper-container--hidden')) {
+    document.getElementById('p2').innerHTML = "Скрыть";
+  } else {
+    document.getElementById('p2').innerHTML = "Показать все";
+  }
+})
 
-function popups() {
-    const element = document.getElementById('div2');
-    element.classList.toggle('brands__swiper-container--hidden');
-    document.querySelector('.read__more').classList.toggle('read__more--rotate');
-    if(element.classList.contains('brands__swiper-container--hidden')) {
-        document.getElementById("p1").innerHTML = "Скрыть";
-    } else {
-        document.getElementById("p1").innerHTML = "Показать все";
-    }
-}
-
-
-function popup() {
-    const element = document.getElementById('div1');
-    element.classList.toggle('swiper-container--hidden');
-    document.querySelector('.read__more').classList.toggle('technics__more--rotate');
-    if(element.classList.contains('swiper-container--hidden')) {
-        document.getElementById("p2").innerHTML = "Скрыть";
-    } else {
-        document.getElementById("p2").innerHTML = "Показать все";
-    }
-}
+document.getElementById('p1').addEventListener('click', function () {
+  document.querySelector('.brands__swiper-container').classList.toggle('brands__swiper-container--hidden');
+  if(document.querySelector('.brands__swiper-container').classList.contains('brands__swiper-container--hidden')) {
+    document.getElementById('p1').innerHTML = "Скрыть";
+  } else {
+    document.getElementById('p1').innerHTML = 'Показать все';
+  }
+})
 
 const burger = document.querySelector('.button-link--burger');
 const mobile = document.querySelector('.mobile-pop');

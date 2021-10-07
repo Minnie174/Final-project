@@ -25,10 +25,16 @@ $grey: #7E7E82;
   width: 100%;
   border-bottom: 1px solid $light-green;
   padding: 16px 0 16px 16px;
+
+  @media (min-width: 1440px) {
+    display: none;
+  }
+
   &__icon {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     &:first-child::after {
       content: "";
       position: absolute;
@@ -38,6 +44,7 @@ $grey: #7E7E82;
       border-radius: 1px;
       left: 186px;
       display: block;
+
       @media (min-width: 768px) {
         content: "";
         display: block;
@@ -49,20 +56,20 @@ $grey: #7E7E82;
         left: 72px;
       }
     }
+
     &:last-child::after {
-      content: "";
-      position: relative;
-      width: 2px;
-      height: 32px;
-      background-color: $shade;
-      border-radius: 1px;
-      right: 123px;
-      display: block;
+      @media (min-width: 768px) {
+        content: "";
+        position: relative;
+        width: 2px;
+        height: 32px;
+        background-color: $shade;
+        border-radius: 1px;
+        right: 123px;
+        display: block;
+      }
     }
   }
-}
-  @media (min-width: 1440px) {
-  display: none;
 }
 
 .button-link {
@@ -72,31 +79,50 @@ $grey: #7E7E82;
     margin-right: 16px;
     cursor: pointer;
     padding: 0;
-    @media (min-width: 768px) {
-      &--profile {
+
+    &--profile {
+
+      @media (min-width: 768px) {
         margin-right: 27px;
       }
+
+      @media (max-width: 767px) {
+        display: none;
+      }
     }
+
+    &--call {
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
+
+    &--chat {
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
+
     &:hover {
       transform: scale(1.1);
     }
   }
+
   &__logo {
     width: 97px;
     height: 51px;
     cursor: pointer;
-    @media (min-width: 768px) {
-      flex: 1 1 auto;
-      margin-left: 16px;
-    }
   }
+
   &__span {
-    font-family: TTLakes-Medium, sans-serif;
-    font-size: 16px;
-    margin-right: 10px;
-    color: $black;
-    line-height: 24px;
-    text-decoration: none;
+    @media (min-width: 1120px) {
+      font-family: TTLakes-Medium, sans-serif;
+      font-size: 16px;
+      margin-right: 10px;
+      color: $black;
+      line-height: 24px;
+      text-decoration: none;
+    }
   }
 }
 
@@ -104,8 +130,21 @@ $grey: #7E7E82;
   background-color: $white-grey;
   width: 100%;
   overflow: hidden;
+
+  @media (min-width: 768px) {
+    background-color: $white-grey;
+  }
+
   &__headline {
     padding: 25px 40px 0 0;
+    @media (min-width: 768px) {
+      padding: 24px 24px 0 0;
+    }
+    @media (min-width: 1120px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
     &::before {
       content: "";
       width: 4px;
@@ -115,20 +154,18 @@ $grey: #7E7E82;
       position: absolute;
     }
   }
+}
+
+.logo {
   @media (min-width: 768px) {
-    background-color: $white-grey;
-    padding: 24px 24px 0 0;
-  }
-  @media (min-width: 1120px) {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex: 1 1 auto;
+    margin-left: 16px;
   }
 }
 
 .headline {
   &__title {
-    font-family: "TT Lakes", sans-serif;
+    font-family: TTLakes-Bold, sans-serif;
     font-size: 28px;
     line-height: 40px;
     font-weight: 700;
@@ -138,7 +175,6 @@ $grey: #7E7E82;
   }
 
   @media (min-width: 1120px) {
-    margin-left: 30px;
     margin-bottom: 0;
   }
 
@@ -166,9 +202,7 @@ $grey: #7E7E82;
     overflow-y: hidden;
     display: flex;
   }
-  &::-webkit-scrollbar {
-    display: none;
-  }
+
   @media (min-width: 1120px) {
     overflow: hidden;
     width: 100%;
@@ -181,6 +215,10 @@ $grey: #7E7E82;
     line-height: 24px;
     letter-spacing: -0.2px;
     list-style-type: none;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
   }
 }
 
@@ -195,203 +233,214 @@ $grey: #7E7E82;
       background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
       right: 0;
     }
-    &__link {
-      border: none;
-      background-color: $white-grey;
-      color: $grey;
-      height: 40px;
-      cursor: pointer;
+  }
 
-      &:hover {
-        background-color: white;
-        border: 2px solid $green-light;
-        border-radius: 6px;
-      }
+  &__link {
+    border: none;
+    background-color: $white-grey;
+    color: $grey;
+    height: 40px;
+    cursor: pointer;
 
-      &:active {
-        background-color: white;
-        border: 2px solid $green-light;
-        border-radius: 6px;
-      }
-
-      &:first-child {
-        background-color: white;
-        border: 2px solid #B8FFEC;
-        border-radius: 6px;
-      }
-
-      &--device {
-        flex: 0 0 254px;
-      }
-
-      &--service {
-        flex: 0 0 211px;
-      }
-
-      &--price {
-        flex: 0 0 152px;
-      }
-
-      &--address {
-        flex: 0 0 233px;
-      }
-
-      &--sprice {
-        flex: 0 0 191px;
-      }
-
-      &--response {
-        flex: 0 0 95px;
-      }
+    &:hover {
+      background-color: white;
+      border: 2px solid $green-light;
+      border-radius: 6px;
     }
 
-    .text__company {
+    &:active {
+      background-color: white;
+      border: 2px solid $green-light;
+      border-radius: 6px;
+    }
+
+    &:first-child {
+      background-color: white;
+      border: 2px solid #B8FFEC;
+      border-radius: 6px;
+    }
+
+    &--device {
+      flex: 0 0 254px;
+    }
+
+    &--service {
+      flex: 0 0 211px;
+    }
+
+    &--price {
+      flex: 0 0 152px;
+    }
+
+    &--address {
+      flex: 0 0 233px;
+    }
+
+    &--sprice {
+      flex: 0 0 191px;
+    }
+
+    &--response {
+      flex: 0 0 95px;
+    }
+  }
+}
+
+.text__company {
+
+  @media (min-width: 1120px) {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+
+  &:first-of-type {
+    @media (max-width: 767px) {
+      font-family: TT Lakes, sans-serif;
+      font-size: 14px;
+      line-height: 18px;
+      font-weight: normal;
+      color: $black;
+      letter-spacing: 0.2px;
+    }
+    @media (min-width: 768px) {
+      display: inherit;
+      font-family: "TT Lakes", sans-serif;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: normal;
+      color: $black;
+      letter-spacing: 0.2px;
+      width: 312px;
+      margin-left: 17px;
+    }
+
+    @media (min-width: 1120px) {
+      display: inherit;
+      font-family: "TT Lakes", sans-serif;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: normal;
+      color: $black;
+      letter-spacing: 0.2px;
+      width: 490px;
+      margin-bottom: 15px;
+      margin-top: 33px;
+      margin-left: 17px;
+    }
+  }
+
+  &:nth-of-type(2) {
+    @media (max-width: 767px) {
+      display: none;
+    }
+    @media (min-width: 768px) {
+      display: inherit;
+      font-family: "TT Lakes", sans-serif;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: normal;
+      color: $black;
+      letter-spacing: 0.2px;
+      width: 312px;
+      margin-left: 17px;
+      margin-top: 8px;
+      margin-bottom: 8px;
+    }
+
+    @media (min-width: 1120px) {
+      display: none;
+    }
+  }
+
+  &:nth-of-type(3) {
+    @media (max-width: 1119px) {
+      display: none;
+    }
+
+    @media (min-width: 1120px) {
+      display: inherit;
+      font-family: "TT Lakes", sans-serif;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: normal;
+      color: $black;
+      letter-spacing: 0.2px;
+      width: 490px;
+      margin-bottom: 15px;
+      margin-top: 0;
+      margin-left: 17px;
+    }
+  }
+
+  &--hidden {
+    display: none;
+
+    &-open {
+      display: block;
+      font-family: "TT Lakes", sans-serif;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: normal;
+      color: #1B1C21;
+      letter-spacing: 0.2px;
+      width: 95%;
+
+      @media (min-width: 768px) {
+        width: 312px;
+        margin-left: 17px;
+      }
+
       @media (min-width: 1120px) {
-        margin-bottom: 15px;
         width: 100%;
       }
-
-      &:first-of-type {
-        @media (max-width: 767px) {
-          font-family: TT Lakes, sans-serif;
-          font-size: 14px;
-          line-height: 18px;
-          font-weight: normal;
-          color: $black;
-          letter-spacing: 0.2px;
-        }
-        @media (min-width: 768px) {
-          display: inherit;
-          font-family: "TT Lakes", sans-serif;
-          font-size: 14px;
-          line-height: 20px;
-          font-weight: normal;
-          color: $black;
-          letter-spacing: 0.2px;
-          width: 312px;
-          margin-left: 17px;
-        }
-        @media (min-width: 1120px) {
-          display: inherit;
-          font-family: "TT Lakes", sans-serif;
-          font-size: 14px;
-          line-height: 20px;
-          font-weight: normal;
-          color: $black;
-          letter-spacing: 0.2px;
-          width: 490px;
-          margin-bottom: 15px;
-          margin-top: 33px;
-          margin-left: 17px;
-        }
-      }
-
-      &:nth-of-type(2) {
-        @media (max-width: 767px) {
-          display: none;
-        }
-        @media (min-width: 768px) {
-          display: inherit;
-          font-family: "TT Lakes", sans-serif;
-          font-size: 14px;
-          line-height: 20px;
-          font-weight: normal;
-          color: $black;
-          letter-spacing: 0.2px;
-          width: 312px;
-          margin-left: 17px;
-          margin-top: 8px;
-          margin-bottom: 8px;
-        }
-        @media (min-width: 1120px) {
-          display: none;
-        }
-      }
-
-      &:nth-of-type(3) {
-        @media (max-width: 1119px) {
-          display: none;
-        }
-        @media (min-width: 1120px) {
-          display: inherit;
-          font-family: "TT Lakes", sans-serif;
-          font-size: 14px;
-          line-height: 20px;
-          font-weight: normal;
-          color: $black;
-          letter-spacing: 0.2px;
-          width: 490px;
-          margin-bottom: 15px;
-          margin-top: 0;
-          margin-left: 17px;
-        }
-      }
-
-      &--hidden {
-        display: none;
-
-        &-open {
-          display: block;
-          font-family: "TT Lakes", sans-serif;
-          font-size: 14px;
-          line-height: 20px;
-          font-weight: normal;
-          color: #1B1C21;
-          letter-spacing: 0.2px;
-          width: 95%;
-
-          @media (min-width: 768px) {
-            width: 312px;
-            margin-left: 17px;
-          }
-
-          @media (min-width: 1120px) {
-            width: 100%;
-          }
-        }
-      }
     }
+  }
+}
 
-    .read {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      margin-left: 30px;
-      cursor: pointer;
-      @media (min-width: 768px) {
-        margin-top: auto;
-      }
+.read {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 30px;
+  cursor: pointer;
 
-      &__more {
-        @media (min-width: 768px) {
-          display: none;
-        }
-      }
+  @media (min-width: 768px) {
+    margin-top: auto;
+  }
 
-      &__title {
-        font-family: TT Lakes, sans-serif;
-        font-size: 16px;
-        line-height: 24px;
-        font-weight: 500;
-        margin-left: 15px;
-        letter-spacing: -0.2px;
-        border: none;
-        background-color: $white-grey;
-        cursor: pointer;
-      }
+  &__more {
+
+    @media (min-width: 768px) {
+      display: none;
     }
+  }
+
+  &__title {
+    font-family: TTLakes-Medium, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    margin-left: 15px;
+    letter-spacing: -0.2px;
+    border: none;
+    background-color: $white-grey;
+    cursor: pointer;
+  }
+}
 
 .info {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   margin-left: 20px;
+
   @media (min-width: 768px) {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     flex-wrap: nowrap;
   }
+
   @media (min-width: 1120px) {
     justify-content: space-between;
     flex-wrap: nowrap;
@@ -402,11 +451,13 @@ $grey: #7E7E82;
 
   &__photo {
     flex-grow: 1;
+
     @media (min-width: 768px) {
       max-width: 360px;
       width: 100%;
       margin-right: 25px;
     }
+
     @media (min-width: 1120px) {
       margin-right: 40px;
       max-width: 560px;
@@ -416,12 +467,14 @@ $grey: #7E7E82;
       width: 100%;
       height: auto;
       max-width: 532px;
+
       @media (min-width: 768px) {
         border-radius: 6px;
         width: 100%;
         max-height: 250px;
         margin-top: 20px;
       }
+
       @media (min-width: 1120px) {
         border-radius: 5px;
         width: 100%;
@@ -435,10 +488,12 @@ $grey: #7E7E82;
   &__text {
     width: 100%;
     margin-bottom: 15px;
+
     @media (min-width: 768px) {
       width: 100%;
       flex: 1;
     }
+
     @media (min-width: 1120px) {
       margin-right: 35px;
       width: 100%;
@@ -457,6 +512,6 @@ $grey: #7E7E82;
       margin-left: 17px;
     }
   }
-}}}
+}
 
 
