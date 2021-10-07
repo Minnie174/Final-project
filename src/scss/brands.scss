@@ -1,0 +1,139 @@
+$light-green: #D9FFF5;
+$grey: #7E7E82;
+$shade: #EAEAEA;
+$almost-white: #B5B6BC;
+$grey-white: #DDDDDD;
+$black: #1B1C21;
+
+.brands {
+  &__header {
+    height: 80px;
+    width: 100%;
+    border-top: 1px solid $light-green;
+    background: linear-gradient(270deg, #FFFFFF 0%, #F8F8F8 98.61%);
+    @media (min-width: 768px) {
+      height: 56px;
+    }
+  }
+  &__title {
+    font-family: TT Lakes, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: $grey;
+    text-transform: uppercase;
+    letter-spacing: -0.2px;
+    margin: 16px;
+  }
+  &__swiper-container {
+    height: 154px;
+    padding-top: 5px;
+    overflow: hidden;
+    @media (min-width: 768px) {
+      height: 190px;
+    }
+    @media (min-width: 1120px) {
+      height: 190px;
+      max-height: 215px;
+    }
+    &--hidden {
+      height: 370px;
+    }
+    @media (min-width: 768px) {
+      height: 370px;
+    }
+    @media (min-width: 1120px) {
+      height: 280px;
+      max-height: 470px;
+    }
+  }
+  &__wrapper {
+    margin-left: 16px;
+    margin-top: 16px;
+    @media (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+  &__swiper-button {
+    border: none;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    &:hover {
+      transform: scale(1.1);
+      cursor: pointer;
+    }
+  }
+}
+
+.swiper__wrapper__slide {
+    max-width: 240px;
+    height: 72px;
+    margin-right: 16px;
+    background-color: white;
+    min-width: 0;
+    @media (min-width: 768px) {
+      margin-right: 24px;
+      margin-bottom: 15px;
+    }
+    @media (min-width: 1440px) {
+      margin-right: 32px;
+    }
+}
+
+.swiper-slide__image {
+  box-sizing: border-box;
+  display: flex;
+  width: 240px;
+  height: 72px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 16px 20px 16px;
+  border: 1px solid $shade;
+  border-radius: 6px;
+  margin-right: 16px;
+}
+
+.swiper-pagination {
+  margin-top: 12px;
+  @media (min-width: 768px) {
+    display: none;
+  }
+  &-bullet:active {
+    background-color: $almost-white;
+  }
+  &-bullet {
+    background: $grey-white;
+  }
+}
+
+.read__more {
+  font-family: TT Lakes, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  color: $black;
+  border: none;
+  background-color: transparent;
+  margin-left: 11px;
+  margin-bottom: 30px;
+  position: relative;
+  cursor: pointer;
+  @media (max-width: 768px) {
+    display: none;
+  }
+  &::before {
+    content: "";
+    display: block;
+    background-image: url("./img/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 30px;
+    height: 24px;
+    float: left;
+    }
+  &--rotate::before {
+    transform: rotate(180deg);
+  }
+}

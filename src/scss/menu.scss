@@ -1,0 +1,233 @@
+$white-grey: #F8F8F8;
+$white: #ffffff;
+$light-green: #D9FFF5;
+$pink: #FF3E79;
+$black: #1B1C21;
+$green: #41F6D7;
+$grey: #7E7E82;
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+@font-face {
+  font-family: "TT Lakes";
+  font-style: normal;
+  src: url("./fonts/TTlakes-Regular.woff")
+}
+
+@font-face {
+  font-family: "TTLakes-Medium";
+  font-style: normal;
+  src: url("./fonts/TTlakes-Medium.woff")
+}
+
+@font-face {
+  font-family: "TTLakes-Bold";
+  font-style: normal;
+  src: url("./fonts/TTlakes-Bold.woff")
+}
+
+body {
+  font-family: TT Lakes, sans-serif;
+  background-color: $white-grey;
+}
+
+.body__wrap {
+  overflow: hidden;
+}
+
+  @media (min-width: 1440px) {
+    display: flex;
+    margin: auto;
+    max-width: 1500px;
+  }
+
+.blur {
+  background-color: $white;
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.9;
+}
+
+.mobile-pop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  transition: all 600ms;
+  &__menu {
+    display: flex;
+    background-color: white;
+    max-width: 360px;
+    height: 100%;
+    max-height: 900px;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &--hidden {
+    visibility: hidden;
+    transform: translateX(-360px);
+  }
+  &__list {
+    flex: 1 1 auto;
+    &--ul {
+      padding: 0;
+      list-style: none;
+      margin-top: 30px;
+    }
+    &-item {
+      font-family: TTLakes-Medium, sans-serif;
+      padding-bottom: 32px;
+      letter-spacing: -0.2px;
+      a {
+        margin-left: 24px;
+      }
+      &:hover::before {
+        content: "";
+        width: 4px;
+        height: 40px;
+        border-radius: 0 4px 4px 0;
+        background-color: $green;
+        position: absolute;
+      }
+    }
+    &-link {
+      text-decoration: none;
+      color: $pink;
+      &:hover {
+        color: $grey;
+      }
+    }
+    &-item {
+      position: relative;
+    }
+  }
+  &__logo {
+    height: 88px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+  &__footer {
+    margin-left: 24px;
+    &-address--link {
+      text-decoration: none;
+      color: $black;
+      &:last-child {
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: bold;
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    &-number {
+      margin-top: 16px;
+    }
+    &-lang {
+      margin-bottom: 32px;
+      &__btn {
+        border: none;
+        background-color: white;
+        margin-top: 40px;
+        cursor: pointer;
+        &:first-child {
+          color: $grey;
+        }
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
+
+.mobile__popup {
+  visibility: visible;
+  transform: translateX(0);
+  position: fixed;
+  z-index: 5;
+  left: 0;
+  right: 0;
+  transition: all 600ms;
+}
+  @media (max-width: 320px) {
+  width: 320px;
+}
+  @media (min-width: 768px) {
+  position: fixed;
+  left: 0;
+  height: 800px;
+  width: 320px;
+  border-right: 1px solid $light-green;
+  box-shadow: 16px 0 52px rgb(14 24 80) ;
+}
+  @media (min-width: 1440px) {
+  display: block;
+  position: static;
+  box-shadow: none;
+}
+.mobile-pop {
+  visibility: visible;
+  transform: translateX(0);
+  display: block;
+  position: static;
+  transition: all 600ms ease-in;
+}
+
+.mobile-button__logo {
+  flex: 1 1 auto;
+  margin-left: 16px;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+.mobile-button__button--close {
+  background-image: url("./img/close.svg");
+  background-repeat: no-repeat;
+  background-color: transparent;
+  width: 40px;
+  height: 40px;
+  }
+  @media (min-width: 1440px) {
+    display: none;
+  }
+
+.mobile-button__button--search {
+  background-image: url("./img/search.svg");
+  background-repeat: no-repeat;
+  background-color: transparent;
+  width: 40px;
+  height: 40px;
+    &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.mobile-button__button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background-color: $pink;
+  cursor: pointer;
+  margin-right: 16px;
+  &:hover {
+    transform: scale(1.1);
+  }
+}

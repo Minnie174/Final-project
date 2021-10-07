@@ -1,0 +1,244 @@
+$light-green: #D9FFF5;
+$grey: #7E7E82;
+$shade: #EAEAEA;
+$black: #1B1C21;
+$almost-white: #B5B6BC;
+$grey-white: #DDDDDD;
+
+.cost {
+  &__header {
+    height: 56px;
+    border-top: 1px solid $light-green;
+    background: linear-gradient(270deg, #FFFFFF 0%, #F8F8F8 98.61%);
+  }
+  &__title {
+    font-family: TT Lakes, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: $grey;
+    text-transform: uppercase;
+    letter-spacing: -0.2px;
+    margin: 16px;
+    @media (min-width: 768px) {
+      margin-left: 24px;
+    }
+    @media (min-width: 1120px) {
+      margin-left: 32px;
+    }
+  }
+  &__services {
+    &-swiper {
+      overflow: hidden;
+      @media (min-width: 768px) {
+        height: 100%;
+      }
+    }
+
+    &--wrapper {
+      margin-left: 16px;
+      margin-right: 16px;
+      @media (min-width: 768px) {
+        flex-wrap: wrap;
+        margin: 63px 24px 24px 24px;
+      }
+      @media (min-width: 1120px) {
+        margin-left: 32px;
+        margin-right: 32px;
+        margin-bottom: 32px;
+      }
+    }
+
+    &--slide {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background-color: white;
+      margin: 16px 16px 16px 0;
+      width: 260px;
+      height: 200px;
+      border: 1px solid #EAEAEA;
+      border-radius: 6px;
+
+      @media (min-width: 1120px) {
+        width: 1020px;
+      }
+
+      &:first-child::before {
+        color: $grey;
+        content: "";
+        display: block;
+        position: absolute;
+        top: -37px;
+        font-size: 14px;
+      }
+    }
+  }
+  &__text {
+    font-family: "TT Lakes", sans-serif;
+    color: #1B1C21;
+    font-size: 14px;
+    margin: 16px 16px 0 16px;
+    line-height: 18px;
+
+    @media (min-width: 768px) {
+      margin: 0;
+    }
+
+    &__flex {
+      display: flex;
+      justify-content: space-between;
+
+      @media (min-width: 768px) {
+        flex-basis: 33%;
+      }
+    }
+
+    &-title {
+
+      @media (min-width: 768px) {
+        flex-basis: 50%;
+      }
+
+      &-title::before {
+        color: #7E7E82;
+        content: "Ремонтные услуги";
+        display: block;
+        font-size: 14px;
+
+        @media (min-width: 768px) {
+          display: none;
+        }
+      }
+    }
+
+    &-price {
+
+      @media (min-width: 768px) {
+        flex-basis: 14%;
+      }
+
+      &-price::before {
+        color: #7E7E82;
+        content: "Цена";
+        display: block;
+        font-size: 14px;
+
+        @media (min-width: 768px) {
+          display: none;
+        }
+      }
+
+      &-duration {
+        margin-bottom: 20px;
+
+        @media (min-width: 768px) {
+          padding-top: 7px;
+        }
+
+        &-duration::before {
+          color: #7E7E82;
+          content: "Срок";
+          display: block;
+          font-size: 14px;
+
+          @media (min-width: 768px) {
+            display: none;
+          }
+        }
+      }
+    }
+
+  &__btn {
+    background-image: url("./img/order.svg");
+    width: 119px;
+    height: 32px;
+    border: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    margin: auto 16px 16px auto;
+    padding: 0;
+
+    @media (min-width: 768px) {
+      margin: 0;
+      flex-basis: 60%;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  &__info {
+    margin-left: 16px;
+    margin-right: 16px;
+
+    @media (min-width: 768px) {
+      margin-left: 24px;
+      margin-right: 24px;
+
+      @media (min-width: 1120px) {
+        margin-left: 32px;
+        margin-right: 32px;
+      }
+
+    &--text {
+      font-size: 14px;
+      line-height: 20px;
+      margin-bottom: 16px;
+      margin-top: 16px;
+
+      @media (min-width: 768px) {
+        width: 421px;
+        height: 60px;
+      }
+    }
+    &--get {
+      font-weight: 500;
+      font-size: 16px;
+      margin-top: 16px;
+
+      &::after {
+        background-image: url("./img/Line.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        content: "";
+        display: inline-block;
+        width: 20px;
+        height: 12px;
+      }
+    }
+  }
+}
+
+.cost__services--slide:first-child .cost__text-price::before {
+  color: $grey;
+  content: "";
+  display: block;
+  position: absolute;
+  top: -37px;
+  font-size: 14px;
+}
+
+.cost__services--slide:first-child .cost__text-duration::before {
+  color: $grey;
+  content: "";
+  display: block;
+  position: absolute;
+  top: -37px;
+  font-size: 14px;
+}
+
+.swiper-pagination {
+  @media (min-width: 768px) {
+    display: none;
+  }
+  &-bullet {
+    background: $grey-white;
+
+    &:active {
+      background-color: $almost-white;
+    }
+  }
+}}}
+
