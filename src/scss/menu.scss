@@ -52,6 +52,7 @@ body {
   left: 0;
   top: 0;
   transition: all 600ms;
+  overflow-y: scroll;
 
   @media (min-width: 1440px) {
     visibility: visible;
@@ -172,6 +173,10 @@ body {
       }
     }
   }
+}
+
+.mobile-pop::-webkit-scrollbar {
+  display: none;
 }
 
 .mobile__popup {

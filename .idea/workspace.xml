@@ -4,7 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="58fa96e2-42bc-4748-8b2f-5341a5978998" name="Changes" comment="" />
+=======
+    <list default="true" id="58fa96e2-42bc-4748-8b2f-5341a5978998" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/js/blur.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/js/feedback-main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/js/feedback.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/js/menu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/js/more-text.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/menu.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/menu.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/page-layout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/page-layout.scss" afterDir="false" />
+    </list>
+>>>>>>> Stashed changes
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,7 +58,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1633940564714</updated>
+<<<<<<< Updated upstream
       <workItem from="1633940566482" duration="3963000" />
+=======
+      <workItem from="1633940566482" duration="3612000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
