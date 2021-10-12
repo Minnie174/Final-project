@@ -6,6 +6,7 @@ import './menu.js';
 import './blur.js';
 import './feedback-main.js';
 import './feedback.js';
+import './feedback-chat.js';
 import './more-text.js';
 
 

@@ -10,5 +10,5 @@ phone.addEventListener('click', function () {
 text.addEventListener('click', function () {
   document.querySelector('.feedback-call').classList.add('feedback__popup');
   document.querySelector('.blur').style.zIndex = "5";
-  document.querySelector('body').style.overflow = 'auto';
+  document.querySelector('body').style.overflow = 'hidden';
 })
