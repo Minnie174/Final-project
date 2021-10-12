@@ -15,6 +15,7 @@ $pink: #FF3E79;
     background-color: $white;
     width: 320px;
     height: 100%;
+    overflow-y: scroll;
 
     @media (min-width: 768px) {
       border-left: 1px solid #D9FFF5;
@@ -41,7 +42,7 @@ $pink: #FF3E79;
     background-repeat: no-repeat;
     background-color: transparent;
     padding: 0;
-    width: 40px;
+    width: 40px;min-height: 40px;
     height: 40px;
     border: none;
     cursor: pointer;

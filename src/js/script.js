@@ -13,5 +13,3 @@ new Swiper(".swiper-container", {
 
 
 
-
-

@@ -16,6 +16,7 @@ $light-green: #D9FFF5;
     margin: 0;
     background-color: $white;
     width: 320px;
+    overflow-y: scroll;
 
     @media (min-width: 768px) {
       border-left: 1px solid #D9FFF5;
@@ -53,7 +54,7 @@ $light-green: #D9FFF5;
     background-color: transparent;
     padding: 0;
     width: 40px;
-    height: 40px;
+    height: 40px;min-height: 40px;
     border: none;
     cursor: pointer;
     margin-left: 16px;

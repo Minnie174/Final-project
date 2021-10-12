@@ -48,11 +48,6 @@ body {
 }
 
 .mobile-pop {
-  position: fixed;
-  left: 0;
-  top: 0;
-  transition: all 600ms;
-  overflow-y: scroll;
 
   @media (min-width: 1440px) {
     visibility: visible;
@@ -185,7 +180,7 @@ body {
   position: fixed;
   z-index: 5;
   left: 0;
-  right: 0;
+  top: 0;
   transition: all 600ms;
 
   @media (max-width: 320px) {

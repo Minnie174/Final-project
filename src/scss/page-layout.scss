@@ -14,7 +14,9 @@ $grey: #7E7E82;
   max-width: 1120px;
   right: 0;
   background-color: $white-grey;
-  margin: auto;
+  @media (max-width: 1440px) {
+    margin: auto;
+  }
 }
 
 .header {
