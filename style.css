@@ -34,7 +34,8 @@ body {
 
 .mobile-pop--hidden {
   visibility: hidden;
-  transform: translateX(-360px); }
+  transform: translateX(-360px);
+  position: fixed; }
 
 @media (min-width: 1440px) {
   .mobile-pop {
