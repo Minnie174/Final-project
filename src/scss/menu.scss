@@ -45,6 +45,7 @@ body {
 .mobile-pop--hidden {
   visibility: hidden;
   transform: translateX(-360px);
+  position: fixed;
 }
 
 .mobile-pop {
